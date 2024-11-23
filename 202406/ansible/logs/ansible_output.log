@@ -1,0 +1,238 @@
+2024-06-24 18:08:06,499 p=3444395 u=upszot n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 18:08:06,598 p=3444395 u=upszot n=ansible | PLAY [all] **********************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:06,609 p=3444395 u=upszot n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,746 p=3444395 u=upszot n=ansible | ok: [localhost]
+2024-06-24 18:08:07,775 p=3444395 u=upszot n=ansible | TASK [include_role : 2do_parcial] ***********************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,805 p=3444395 u=upszot n=ansible | TASK [2do_parcial : debug] ******************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,817 p=3444395 u=upszot n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 18:08:07,836 p=3444395 u=upszot n=ansible | TASK [Otra tarea] ***************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,851 p=3444395 u=upszot n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-23 04:17:02,920 p=13334 u=radimak n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found
+localhost was 127.0.0.1
+
+2024-11-23 04:17:03,135 p=13334 u=radimak n=ansible | PLAY [all] *********************************************************************
+2024-11-23 04:17:03,147 p=13334 u=radimak n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-23 04:17:03,257 p=13334 u=radimak n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nradimak@127.0.0.1: Permission denied (publickey,password).", "unreachable": true}
+2024-11-23 04:17:04,072 p=13334 u=radimak n=ansible | ok: [localhost]
+2024-11-23 04:17:04,082 p=13334 u=radimak n=ansible | TASK [include_role : 2do_parcial] **********************************************
+2024-11-23 04:17:04,097 p=13334 u=radimak n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/radimak/repogit/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 21, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    validate: 'visudo -cf %s'
+  - name: Crear archivo de datos del alumno
+  ^ here
+
+2024-11-23 04:17:04,099 p=13334 u=radimak n=ansible | PLAY RECAP *********************************************************************
+2024-11-23 04:17:04,099 p=13334 u=radimak n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-23 04:17:04,099 p=13334 u=radimak n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-23 04:29:06,363 p=13625 u=radimak n=ansible | ERROR! the playbook: test/test.yml could not be found
+2024-11-23 04:29:49,269 p=13626 u=radimak n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found
+localhost was 127.0.0.1
+
+2024-11-23 04:29:49,371 p=13626 u=radimak n=ansible | PLAY [all] *********************************************************************
+2024-11-23 04:29:49,377 p=13626 u=radimak n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-23 04:29:50,189 p=13626 u=radimak n=ansible | ok: [localhost]
+2024-11-23 04:29:50,916 p=13626 u=radimak n=ansible | ok: [127.0.0.1]
+2024-11-23 04:29:50,926 p=13626 u=radimak n=ansible | TASK [include_role : 2do_parcial] **********************************************
+2024-11-23 04:29:50,955 p=13626 u=radimak n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/radimak/repogit/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 18, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    validate: 'visudo -cf %s'
+  - name: Crear archivo de datos del alumno
+  ^ here
+
+2024-11-23 04:29:50,957 p=13626 u=radimak n=ansible | PLAY RECAP *********************************************************************
+2024-11-23 04:29:50,958 p=13626 u=radimak n=ansible | 127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-23 04:29:50,958 p=13626 u=radimak n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-23 04:32:55,039 p=13929 u=radimak n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found
+localhost was 127.0.0.1
+
+2024-11-23 04:32:55,142 p=13929 u=radimak n=ansible | PLAY [all] *********************************************************************
+2024-11-23 04:32:55,149 p=13929 u=radimak n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-23 04:32:55,899 p=13929 u=radimak n=ansible | ok: [localhost]
+2024-11-23 04:32:56,533 p=13929 u=radimak n=ansible | ok: [127.0.0.1]
+2024-11-23 04:32:56,542 p=13929 u=radimak n=ansible | TASK [include_role : 2do_parcial] **********************************************
+2024-11-23 04:32:56,569 p=13929 u=radimak n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/radimak/repogit/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 18, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    validate: 'visudo -cf %s'
+  - name: Crear archivo de datos del alumno
+  ^ here
+
+2024-11-23 04:32:56,571 p=13929 u=radimak n=ansible | PLAY RECAP *********************************************************************
+2024-11-23 04:32:56,571 p=13929 u=radimak n=ansible | 127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-23 04:32:56,571 p=13929 u=radimak n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-23 04:38:32,749 p=14786 u=radimak n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found
+localhost was 127.0.0.1
+
+2024-11-23 04:38:32,848 p=14786 u=radimak n=ansible | PLAY [all] *********************************************************************
+2024-11-23 04:38:32,855 p=14786 u=radimak n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-23 04:38:33,613 p=14786 u=radimak n=ansible | ok: [localhost]
+2024-11-23 04:38:34,261 p=14786 u=radimak n=ansible | ok: [127.0.0.1]
+2024-11-23 04:38:34,270 p=14786 u=radimak n=ansible | TASK [include_role : 2do_parcial] **********************************************
+2024-11-23 04:38:34,296 p=14786 u=radimak n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  but found another document
+
+The error appears to be in '/home/radimak/repogit/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 38, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    mode: '0644'
+---
+^ here
+
+2024-11-23 04:38:34,297 p=14786 u=radimak n=ansible | PLAY RECAP *********************************************************************
+2024-11-23 04:38:34,298 p=14786 u=radimak n=ansible | 127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-23 04:38:34,299 p=14786 u=radimak n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-23 04:41:12,819 p=15078 u=radimak n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found
+localhost was 127.0.0.1
+
+2024-11-23 04:41:12,914 p=15078 u=radimak n=ansible | PLAY [all] *********************************************************************
+2024-11-23 04:41:12,921 p=15078 u=radimak n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-23 04:41:13,668 p=15078 u=radimak n=ansible | ok: [localhost]
+2024-11-23 04:41:14,300 p=15078 u=radimak n=ansible | ok: [127.0.0.1]
+2024-11-23 04:41:14,311 p=15078 u=radimak n=ansible | TASK [include_role : 2do_parcial] **********************************************
+2024-11-23 04:41:14,355 p=15078 u=radimak n=ansible | TASK [2do_parcial : debug] *****************************************************
+2024-11-23 04:41:14,370 p=15078 u=radimak n=ansible | ok: [127.0.0.1] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-23 04:41:14,375 p=15078 u=radimak n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-23 04:41:14,382 p=15078 u=radimak n=ansible | TASK [2do_parcial : Crear estructura de directorios] ***************************
+2024-11-23 04:41:14,642 p=15078 u=radimak n=ansible | changed: [localhost] => (item=alumno)
+2024-11-23 04:41:14,766 p=15078 u=radimak n=ansible | ok: [127.0.0.1] => (item=alumno)
+2024-11-23 04:41:14,773 p=15078 u=radimak n=ansible | changed: [localhost] => (item=equipo)
+2024-11-23 04:41:14,961 p=15078 u=radimak n=ansible | ok: [127.0.0.1] => (item=equipo)
+2024-11-23 04:41:14,967 p=15078 u=radimak n=ansible | TASK [2do_parcial : Configurar sudoers para el grupo 2PSupervisores] ***********
+2024-11-23 04:41:15,259 p=15078 u=radimak n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: PermissionError: [Errno 13] Permission denied: b'/etc/sudoers'
+2024-11-23 04:41:15,260 p=15078 u=radimak n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "module_stderr": "Traceback (most recent call last):\n  File \"/home/radimak/.ansible/tmp/ansible-tmp-1732336874.9887102-15460-277805511155258/AnsiballZ_lineinfile.py\", line 102, in <module>\n    _ansiballz_main()\n  File \"/home/radimak/.ansible/tmp/ansible-tmp-1732336874.9887102-15460-277805511155258/AnsiballZ_lineinfile.py\", line 94, in _ansiballz_main\n    invoke_module(zipped_mod, temp_path, ANSIBALLZ_PARAMS)\n  File \"/home/radimak/.ansible/tmp/ansible-tmp-1732336874.9887102-15460-277805511155258/AnsiballZ_lineinfile.py\", line 40, in invoke_module\n    runpy.run_module(mod_name='ansible.modules.lineinfile', init_globals=None, run_name='__main__', alter_sys=True)\n  File \"/usr/lib/python3.10/runpy.py\", line 224, in run_module\n    return _run_module_code(code, init_globals, run_name, mod_spec)\n  File \"/usr/lib/python3.10/runpy.py\", line 96, in _run_module_code\n    _run_code(code, mod_globals, init_globals,\n  File \"/usr/lib/python3.10/runpy.py\", line 86, in _run_code\n    exec(code, run_globals)\n  File \"/tmp/ansible_lineinfile_payload_6w1gc1va/ansible_lineinfile_payload.zip/ansible/modules/lineinfile.py\", line 580, in <module>\n  File \"/tmp/ansible_lineinfile_payload_6w1gc1va/ansible_lineinfile_payload.zip/ansible/modules/lineinfile.py\", line 570, in main\n  File \"/tmp/ansible_lineinfile_payload_6w1gc1va/ansible_lineinfile_payload.zip/ansible/modules/lineinfile.py\", line 277, in present\nPermissionError: [Errno 13] Permission denied: b'/etc/sudoers'\n", "module_stdout": "", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}
+2024-11-23 04:41:15,318 p=15078 u=radimak n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: PermissionError: [Errno 13] Permission denied: b'/etc/sudoers'
+2024-11-23 04:41:15,319 p=15078 u=radimak n=ansible | fatal: [127.0.0.1]: FAILED! => {"changed": false, "module_stderr": "Shared connection to 127.0.0.1 closed.\r\n", "module_stdout": "Traceback (most recent call last):\r\n  File \"/home/radimak/.ansible/tmp/ansible-tmp-1732336874.9866598-15458-92862372882122/AnsiballZ_lineinfile.py\", line 102, in <module>\r\n    _ansiballz_main()\r\n  File \"/home/radimak/.ansible/tmp/ansible-tmp-1732336874.9866598-15458-92862372882122/AnsiballZ_lineinfile.py\", line 94, in _ansiballz_main\r\n    invoke_module(zipped_mod, temp_path, ANSIBALLZ_PARAMS)\r\n  File \"/home/radimak/.ansible/tmp/ansible-tmp-1732336874.9866598-15458-92862372882122/AnsiballZ_lineinfile.py\", line 40, in invoke_module\r\n    runpy.run_module(mod_name='ansible.modules.lineinfile', init_globals=None, run_name='__main__', alter_sys=True)\r\n  File \"/usr/lib/python3.10/runpy.py\", line 224, in run_module\r\n    return _run_module_code(code, init_globals, run_name, mod_spec)\r\n  File \"/usr/lib/python3.10/runpy.py\", line 96, in _run_module_code\r\n    _run_code(code, mod_globals, init_globals,\r\n  File \"/usr/lib/python3.10/runpy.py\", line 86, in _run_code\r\n    exec(code, run_globals)\r\n  File \"/tmp/ansible_lineinfile_payload_dlbzlqds/ansible_lineinfile_payload.zip/ansible/modules/lineinfile.py\", line 580, in <module>\r\n  File \"/tmp/ansible_lineinfile_payload_dlbzlqds/ansible_lineinfile_payload.zip/ansible/modules/lineinfile.py\", line 570, in main\r\n  File \"/tmp/ansible_lineinfile_payload_dlbzlqds/ansible_lineinfile_payload.zip/ansible/modules/lineinfile.py\", line 277, in present\r\nPermissionError: [Errno 13] Permission denied: b'/etc/sudoers'\r\n", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}
+2024-11-23 04:41:15,321 p=15078 u=radimak n=ansible | PLAY RECAP *********************************************************************
+2024-11-23 04:41:15,321 p=15078 u=radimak n=ansible | 127.0.0.1                  : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-23 04:41:15,321 p=15078 u=radimak n=ansible | localhost                  : ok=3    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-23 04:43:18,098 p=15522 u=radimak n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found
+localhost was 127.0.0.1
+
+2024-11-23 04:43:18,190 p=15522 u=radimak n=ansible | PLAY [all] *********************************************************************
+2024-11-23 04:43:18,197 p=15522 u=radimak n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-23 04:43:18,437 p=15522 u=radimak n=ansible | fatal: [localhost]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.setup": {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python3"}, "failed": true, "module_stderr": "sudo: a password is required\n", "module_stdout": "", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}}, "msg": "The following modules failed to execute: ansible.legacy.setup\n"}
+2024-11-23 04:43:18,970 p=15522 u=radimak n=ansible | fatal: [127.0.0.1]: FAILED! => {"msg": "Missing sudo password"}
+2024-11-23 04:43:18,972 p=15522 u=radimak n=ansible | PLAY RECAP *********************************************************************
+2024-11-23 04:43:18,973 p=15522 u=radimak n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-23 04:43:18,973 p=15522 u=radimak n=ansible | localhost                  : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-23 04:43:57,792 p=15665 u=radimak n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-11-23 04:43:57,794 p=15665 u=radimak n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2024-11-23 04:43:57,881 p=15665 u=radimak n=ansible | PLAY [all] *********************************************************************
+2024-11-23 04:43:57,881 p=15665 u=radimak n=ansible | skipping: no hosts matched
+2024-11-23 04:43:57,881 p=15665 u=radimak n=ansible | PLAY RECAP *********************************************************************
+2024-11-23 04:46:22,647 p=15671 u=radimak n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found
+localhost was 127.0.0.1
+
+2024-11-23 04:46:22,738 p=15671 u=radimak n=ansible | PLAY [all] *********************************************************************
+2024-11-23 04:46:22,745 p=15671 u=radimak n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-23 04:46:23,765 p=15671 u=radimak n=ansible | ok: [localhost]
+2024-11-23 04:46:24,255 p=15671 u=radimak n=ansible | ok: [127.0.0.1]
+2024-11-23 04:46:24,267 p=15671 u=radimak n=ansible | TASK [include_role : 2do_parcial] **********************************************
+2024-11-23 04:46:24,302 p=15671 u=radimak n=ansible | TASK [2do_parcial : debug] *****************************************************
+2024-11-23 04:46:24,314 p=15671 u=radimak n=ansible | ok: [127.0.0.1] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-23 04:46:24,318 p=15671 u=radimak n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-23 04:46:24,324 p=15671 u=radimak n=ansible | TASK [2do_parcial : Crear estructura de directorios] ***************************
+2024-11-23 04:46:24,577 p=15671 u=radimak n=ansible | ok: [localhost] => (item=alumno)
+2024-11-23 04:46:24,720 p=15671 u=radimak n=ansible | ok: [localhost] => (item=equipo)
+2024-11-23 04:46:24,722 p=15671 u=radimak n=ansible | ok: [127.0.0.1] => (item=alumno)
+2024-11-23 04:46:24,947 p=15671 u=radimak n=ansible | ok: [127.0.0.1] => (item=equipo)
+2024-11-23 04:46:24,952 p=15671 u=radimak n=ansible | TASK [2do_parcial : Configurar sudoers para el grupo 2PSupervisores] ***********
+2024-11-23 04:46:25,238 p=15671 u=radimak n=ansible | changed: [localhost]
+2024-11-23 04:46:25,256 p=15671 u=radimak n=ansible | ok: [127.0.0.1]
+2024-11-23 04:46:25,280 p=15671 u=radimak n=ansible | TASK [2do_parcial : Crear archivo de datos del alumno] *************************
+2024-11-23 04:46:25,795 p=15671 u=radimak n=ansible | changed: [localhost]
+2024-11-23 04:46:25,812 p=15671 u=radimak n=ansible | ok: [127.0.0.1]
+2024-11-23 04:46:25,817 p=15671 u=radimak n=ansible | TASK [2do_parcial : Crear archivo de datos del equipo] *************************
+2024-11-23 04:46:26,227 p=15671 u=radimak n=ansible | changed: [localhost]
+2024-11-23 04:46:26,282 p=15671 u=radimak n=ansible | ok: [127.0.0.1]
+2024-11-23 04:46:26,288 p=15671 u=radimak n=ansible | TASK [Otra tarea] **************************************************************
+2024-11-23 04:46:26,305 p=15671 u=radimak n=ansible | ok: [127.0.0.1] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-23 04:46:26,306 p=15671 u=radimak n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-23 04:46:26,317 p=15671 u=radimak n=ansible | PLAY RECAP *********************************************************************
+2024-11-23 04:46:26,317 p=15671 u=radimak n=ansible | 127.0.0.1                  : ok=7    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-23 04:46:26,317 p=15671 u=radimak n=ansible | localhost                  : ok=7    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-23 05:02:57,644 p=16433 u=radimak n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found
+localhost was 127.0.0.1
+
+2024-11-23 05:02:57,736 p=16433 u=radimak n=ansible | PLAY [all] *********************************************************************
+2024-11-23 05:02:57,743 p=16433 u=radimak n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-23 05:02:58,746 p=16433 u=radimak n=ansible | ok: [localhost]
+2024-11-23 05:02:59,213 p=16433 u=radimak n=ansible | ok: [127.0.0.1]
+2024-11-23 05:02:59,223 p=16433 u=radimak n=ansible | TASK [include_role : 2do_parcial] **********************************************
+2024-11-23 05:02:59,255 p=16433 u=radimak n=ansible | TASK [2do_parcial : Crear directorios para alumno y equipo] ********************
+2024-11-23 05:02:59,500 p=16433 u=radimak n=ansible | ok: [localhost] => (item=alumno)
+2024-11-23 05:02:59,642 p=16433 u=radimak n=ansible | ok: [localhost] => (item=equipo)
+2024-11-23 05:02:59,648 p=16433 u=radimak n=ansible | ok: [127.0.0.1] => (item=alumno)
+2024-11-23 05:02:59,879 p=16433 u=radimak n=ansible | ok: [127.0.0.1] => (item=equipo)
+2024-11-23 05:02:59,889 p=16433 u=radimak n=ansible | TASK [2do_parcial : Crear archivo de datos del alumno] *************************
+2024-11-23 05:03:00,370 p=16433 u=radimak n=ansible | ok: [localhost]
+2024-11-23 05:03:00,498 p=16433 u=radimak n=ansible | ok: [127.0.0.1]
+2024-11-23 05:03:00,503 p=16433 u=radimak n=ansible | TASK [2do_parcial : Crear archivo de datos del equipo] *************************
+2024-11-23 05:03:00,892 p=16433 u=radimak n=ansible | changed: [localhost]
+2024-11-23 05:03:01,081 p=16433 u=radimak n=ansible | ok: [127.0.0.1]
+2024-11-23 05:03:01,086 p=16433 u=radimak n=ansible | TASK [2do_parcial : Configurar sudoers para 2PSupervisores] ********************
+2024-11-23 05:03:01,337 p=16433 u=radimak n=ansible | ok: [localhost]
+2024-11-23 05:03:01,367 p=16433 u=radimak n=ansible | ok: [127.0.0.1]
+2024-11-23 05:03:01,373 p=16433 u=radimak n=ansible | TASK [Otra tarea] **************************************************************
+2024-11-23 05:03:01,384 p=16433 u=radimak n=ansible | ok: [127.0.0.1] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-23 05:03:01,389 p=16433 u=radimak n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-23 05:03:01,400 p=16433 u=radimak n=ansible | PLAY RECAP *********************************************************************
+2024-11-23 05:03:01,401 p=16433 u=radimak n=ansible | 127.0.0.1                  : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-23 05:03:01,402 p=16433 u=radimak n=ansible | localhost                  : ok=6    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
